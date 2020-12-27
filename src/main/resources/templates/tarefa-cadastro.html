@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+
+<body>
+   <div  layout:fragment="content">
+
+       <div id="area-principal">
+        
+        <h2> nome tarefa </h2>
+        <div id="form-tarefa-cadastro">
+           <form method="post" th:action="@{/tarefa/save}">  
+                <label>nome</label><br>
+            <input type="text" name="nome"><br><br>
+            <input type="hidden" name="concluida" value = "false">
+            <label for="">descriçao</label><br>
+            <textarea name="descricao">
+
+            </textarea><br><br>
+            <label>prioridade</label><br>
+            <select>
+                <option value="urgente">urgente</option>
+                <option value="alta">importante</option>
+                <option value="normal">normal</option>
+            </select><br><br>
+
+            <input type="submit" value="cadastrar">
+        </form>
+        </div>
+     </div>
+   </div> 
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/estilo.css}">
+    <title>Index</title>
+</head>
+<body>
+    <header>
+        <a th:href="@{/}">  
+        <div id="logo">
+            <span class="logotipo">Terefas Diarias </span>
+       </div></a> 
+
+        
+
+        <a th:href="@{/tarefa/new}"> <div id="notificaçao">
+            <span class="logar-name">nova</span>
+       </div></a>
+    </header>
+    
+    <div layout:fragment="content"></div>
+    
+    
+</body>
+</html>
